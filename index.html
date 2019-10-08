@@ -1,1 +1,58 @@
+<html>
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet" >
+</head>
 
+<body>
+  
+    <header>Data Tranformation II</header>
+    
+<div class="one">
+    <h1>B1</h1>
+    <pre>
+      var finalPicture = function(penguin)
+    {
+        var object = {pic:penguin.picture,
+                     finalGrade:penguin.final[0].grade};
+        
+        return object;
+        
+    }
+    
+    var answer=[classroom.map(finalPicture)];
+    </pre>
+    
+    <p>
+    This function first defines an object which has a penguin's picture and the grade it received on the final. Using classroom.map it takes all of penguins in the classroom array and runs the function for each one. Then it takes all of the objects which contain the picture and final grade for their respective penguin and puts them into a new array.
+    </p>
+</div>
+    
+<div class="two">
+    <h1>C1</h1>
+    <pre>
+    var getQuizGrade = function(penguin)
+    {
+       var firstquiz = penguin.quizes[0].grade;
+       
+       return firstquiz;
+    }
+    
+    var answer= d3.mean(classroom.map(getQuizGrade));
+    </pre>
+    
+    <p>
+    This function returns a number that is defined as the grade a penguin received on the first quiz. Using classroom.map the function is run for every penguin in the classroom array and the quiz grade for every penguin is put into a new array. d3.mean then takes all of the quiz grades in this new array and uses them to calculate the mean grade. 
+    </p>
+    
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
